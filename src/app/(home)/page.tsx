@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import HeroSection from "@/components/ui/HeroSection";
+import Layout from "./Layout";
 
-const Homepage = () => {
+
+const Homepage = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
-      homepage
-    </div>
-  )
-}
+    <Layout>
+      <HeroSection />
+      {children}
+    </Layout>
+  );
+};
 
-export default Homepage
+export default Homepage;
