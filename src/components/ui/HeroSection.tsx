@@ -26,33 +26,35 @@ const suggestionBtnText:SuggestionText[] = [
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 blur-2xl opacity-50 pointer-events-none"></div>
+    <section className="relative m-10 flex flex-col items-center justify-center bg-white">
+  {/* Content Wrapper with Background */}
+  <div className="relative bg-gradient-to-r from-blue-500 to-purple-300 rounded-lg p-8 shadow-lg text-center">
+    <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+      Build AI-driven forms using Open AI
+    </h1>
+    <p className="mt-4 text-lg md:text-xl text-white max-w-2xl mx-auto">
+      Leverage the power of AI to create a form in minutes
+    </p>
 
-      {/* Content */}
-      <div className="container mx-auto text-center relative z-10">
-        <h1 className="text-4xl font-bold text-white">
-          Build AI-driven forms using Open AI
-        </h1>
-        <p className="mt-4 text-lg text-white">
-          Leverage the power of AI to create a form in minutes
-        </p>
+    {/* Generate Form Input */}
+    <div className="mt-8 w-full max-w-md mx-auto">
+      <GenerateFormInput />
+      <div className="grid grid-cols-3 gap-2 p-2 mt-4">
+        {suggestionBtnText.map((ClipboardItem: SuggestionText, index: number) => (
+          <Button
+            key={index}
+            className="rounded-full h-10 text-center text-sm font-medium"
+            variant={"outline"}
+          >
+            {ClipboardItem.label}
+          </Button>
+        ))}
       </div>
+    </div>
+  </div>
+</section>
 
-      {/* Generate Form Input */}
-      <div className="mt-8 relative z-10 w-full px-4 max-w-lg">
-        <GenerateFormInput />
 
-<div className="grid grid-cols-3 gap-1 p-2">
-        {
-          suggestionBtnText.map((ClipboardItem:SuggestionText,index:number)=>(
-            <Button className="rounded-full h-10 text-center " variant={'outline'} >{ClipboardItem.label}</Button>
-          ))
-        }
-        </div>
-      </div>
-    </section>
   );
 };
 
