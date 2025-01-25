@@ -2,11 +2,11 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white dark:bg-gray-900">
+    <footer className="bg-black text-white dark:bg-gray-900 mt-5">
       <div className="mx-auto w-full max-w-screen-xl">
         <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Company</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               {['About', 'Careers', 'Brand Center', 'Blog'].map((item) => (
                 <li className="mb-4" key={item}>
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Help center</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               {['Discord Server', 'Twitter', 'Facebook', 'Contact Us'].map((item) => (
                 <li className="mb-4" key={item}>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Legal</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               {['Privacy Policy', 'Licensing', 'Terms & Conditions'].map((item) => (
                 <li className="mb-4" key={item}>
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Download</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               {['iOS', 'Android', 'Windows', 'MacOS'].map((item) => (
                 <li className="mb-4" key={item}>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
             ].map(({ name, path }) => (
               <a key={name} href={path} className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                 <span className="sr-only">{name}</span>
-                {/* Replace with the appropriate SVG icon for each link */}
+                
               </a>
             ))}
           </div>
